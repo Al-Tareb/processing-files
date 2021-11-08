@@ -1,0 +1,158 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: antiquewhite;
+}
+section{
+    height: 300px;
+    width: 300px;
+    margin: 300px 700px;
+    padding: 60px;
+    text-align: center;
+}
+figure{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;   
+    position: relative; 
+    
+}
+.item {  
+    position: absolute; 
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;   
+}
+
+
+.item1{
+    animation:  fileMove1;
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+.item2{
+   
+    animation:  fileMove1;
+    animation-delay: 2s;
+    animation-duration: 1s;  
+    animation-iteration-count: 3;
+}
+
+@keyframes fileMove1{
+    0% {
+        transform: scale(0.8) translateX(50%);
+        opacity: 0;
+        visibility: hidden;  
+    }
+    50% {
+        transform: scale(1.3) translateX(30%);
+        opacity: 1;
+        visibility: visible;
+       
+    }
+    100% {
+        transform: scale(0.8) translateX(-50%);
+        opacity: 0;
+        visibility: hidden;
+        
+    }
+}
+
+
+.item3{
+   
+    animation:  fileMove2;
+    animation-delay: 5s;
+    animation-duration: 1s;  
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    
+}
+.label2{
+
+    animation:  fileMove2;
+    animation-delay: 5s;
+    animation-duration: 1s;  
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    margin-top: 0px;
+    margin-left: -50px;
+    
+}
+
+@keyframes fileMove2{
+    0% {
+        transform: scale(0.8) translateY(-50%); 
+        opacity: 1;
+        visibility: visible;
+       
+    } 
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+        visibility: visible;
+       
+    }
+
+    100% {
+        transform: scale(1) translateY(20%); 
+        opacity: 1;
+        visibility: visible;
+        
+    }
+}
+
+
+
+.label1{
+    animation:  label;
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-iteration-count: 4;
+    margin-top: 140px;
+    margin-left: 40px;
+    display: block;
+    opacity: 0;
+        visibility: hidden;
+
+}
+@keyframes label{
+    0% {
+        transform: scale(.8) ;
+        opacity: 0;
+        visibility: hidden;
+      
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+        visibility: visible;     
+    }
+    100% {
+        transform: scale(0.8);
+        opacity: 0;
+        visibility: hidden;
+        
+    }
+}
+
+
+
+div img{
+    width: 100px;
+    height: 100px;
+    display: block;
+    
+}
+
+.label2{
+    
+    opacity: 0;
+        visibility: hidden;
+
+}
